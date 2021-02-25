@@ -2,9 +2,8 @@ import React, { Component, Fragment } from 'react';
 import { HashRouter, Switch, Route } from 'react-router-dom'
 
 import './styles/main.scss';
-import Home from './views/Home';
-import About from './views/About';
-import News from './views/News';
+import Login from './views/login';
+
 
 class App extends Component {
   constructor(props) {
@@ -16,9 +15,8 @@ class App extends Component {
       <Fragment>
         <HashRouter>
           <Switch>
-            <Route component={Home} exact path="/" />
-            <Route component={About} path="/about" />
-            <Route component={News} path="/news" />
+            <Route component={Login} exact path="/" />
+  
           </Switch>
         </HashRouter>
       </Fragment>
