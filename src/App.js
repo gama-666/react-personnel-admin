@@ -4,7 +4,6 @@ import { HashRouter, Switch, Route } from 'react-router-dom'
 import './styles/main.scss';
 import Login from './views/login';
 
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -16,7 +15,6 @@ class App extends Component {
         <HashRouter>
           <Switch>
             <Route component={Login} exact path="/" />
-  
           </Switch>
         </HashRouter>
       </Fragment>
