@@ -10,6 +10,11 @@ import { Login } from "../../api/account";
 import ButtonCode from "../../components/code"
 //加密
 import CryptoJs from 'crypto-js';
+//增加白名单
+import { withRouter } from "react-router-dom"
+//方法，存储token
+import { setToken } from "../../utils/session"
+
 class LoginFrom extends Component {
     constructor(props) {
         super(props);
@@ -35,6 +40,10 @@ class LoginFrom extends Component {
         Login(data).then(response => {
             message.success(response.data.message, 1);
             this.setState({ loading: false })
+            //存储token
+            setToken(response.data.data.token)
+            //路由跳转
+            this.props.history.push('/index')
         }).catch(error => {
             message.error(error.data.message, 1);
             this.setState({ loading: false })
@@ -97,4 +106,4 @@ class LoginFrom extends Component {
     }
 }
 
-export default LoginFrom;
+export default withRouter(LoginFrom);

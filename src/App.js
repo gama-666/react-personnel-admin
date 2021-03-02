@@ -1,8 +1,12 @@
 import React, { Component, Fragment } from 'react';
-import { HashRouter, Switch, Route } from 'react-router-dom'
-
+import { Switch, Route, BrowserRouter } from 'react-router-dom'
+//css
 import './styles/main.scss';
+//组件
 import Login from './views/login';
+import Index from './views/index';
+//组件 路由私有化
+import PrivateRoute from "./components/privateRoute"
 
 class App extends Component {
   constructor(props) {
@@ -12,11 +16,12 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <HashRouter>
+        <BrowserRouter>
           <Switch>
-            <Route component={Login} exact path="/" />
+            <Route exact component={Login} path="/" />
+            <PrivateRoute component={Index} path="/index" />
           </Switch>
-        </HashRouter>
+        </BrowserRouter>
       </Fragment>
     )
   }
