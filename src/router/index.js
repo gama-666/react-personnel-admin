@@ -12,12 +12,12 @@ const Router = [
         child: [
             {
                 title: "用户列表",
-                icon: <UserOutlined />,
+                icon: '',
                 key: "/index/user/list",
             },
             {
                 title: "添加用户",
-                icon: <UserOutlined />,
+                icon: '',
                 key: "/index/user/add",
             }
         ]
@@ -29,12 +29,12 @@ const Router = [
         child: [
             {
                 title: "用户列表",
-                icon: <UserOutlined />,
+                icon:'',
                 key: "/index/department/list",
             },
             {
                 title: "添加用户",
-                icon: <UserOutlined />,
+                icon: '',
                 key: "/index/department/add",
             }
         ]
@@ -46,12 +46,12 @@ const Router = [
         child: [
             {
                 title: "用户列表",
-                icon: <UserOutlined />,
+                icon: '',
                 key: "/index/position/list",
             },
             {
                 title: "添加用户",
-                icon: <UserOutlined />,
+                icon: '',
                 key: "/index/position/add",
             }
         ]
