@@ -28,12 +28,12 @@ const Router = [
         key: "/index/department",
         child: [
             {
-                title: "用户列表",
+                title: "部门列表",
                 icon:'',
                 key: "/index/department/list",
             },
             {
-                title: "添加用户",
+                title: "添加部门",
                 icon: '',
                 key: "/index/department/add",
             }
